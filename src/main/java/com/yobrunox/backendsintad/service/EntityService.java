@@ -11,6 +11,7 @@ import com.yobrunox.backendsintad.repository.EntidadRepository;
 import com.yobrunox.backendsintad.repository.TipoContribuyenteRepository;
 import com.yobrunox.backendsintad.repository.TipoDocumentoRepository;
 import lombok.AllArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -24,9 +25,11 @@ import java.util.Set;
 @AllArgsConstructor
 public class EntityService {
 
-
+    @Autowired
     private final EntidadRepository entidadRepository;
+    @Autowired
     private final TipoContribuyenteRepository tipoContribuyenteRepository;
+    @Autowired
     private final TipoDocumentoRepository tipoDocumentoRepository;
 
     public List<EntidadGetDTO> getAllEntidades(){

@@ -29,7 +29,7 @@ public class TipoContribuyenteController {
     }
 
     @GetMapping("getById/{id}")
-    public ResponseEntity<?> getAll(@PathVariable Integer id) {
+    public ResponseEntity<?> getById(@PathVariable Integer id) {
         TipoContribuyenteGetDTO tipoContribuyente = tipoContribuyenteService.getTipoContribuyente(id);
         ErrorAndResponseDTO response = ErrorAndResponseDTO.builder()
                 .message("Tipo de contribuyente obtenida correctamente")
