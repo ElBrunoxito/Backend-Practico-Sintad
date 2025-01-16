@@ -31,8 +31,8 @@ public class SecurityConfig {
                 .authorizeHttpRequests(authRequest ->
                         authRequest
                                 .requestMatchers("v1/api-docs/**").permitAll()
-                                .requestMatchers("api/auth/**").permitAll()
-                                //.requestMatchers("api/user/**").hasRole(ERole   .USER.toString())
+                                //.requestMatchers("api/auth/**").permitAll()
+                                .requestMatchers("api/user/**").hasRole(ERole   .USER.toString())
 
                                 .anyRequest().permitAll()
                 )
